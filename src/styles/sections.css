@@ -449,9 +449,6 @@
   .story-section-grid {
     grid-template-columns: 1fr;
   }
-  .global-kidney-layer {
-    display: none;
-  }
 }
 
 /* --------------------------------------------------------------------------

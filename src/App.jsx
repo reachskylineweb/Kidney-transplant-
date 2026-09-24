@@ -13,6 +13,7 @@ import { Navbar } from './components/Navbar';
 import { HeroAndStory } from './components/HeroAndStory';
 
 gsap.registerPlugin(ScrollTrigger);
+ScrollTrigger.config({ ignoreMobileResize: true });
 
 export default function App() {
   useEffect(() => {

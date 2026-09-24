@@ -123,7 +123,7 @@
     font-size: 1.4rem;
   }
 
-  /* Section Containers on Mobile */
+  /* Section Containers on Mobile (Preserve GSAP ScrollTrigger Pinned Scrubbing) */
   .mrblack-hero-section,
   .story-section-2,
   .causes-section,
@@ -132,8 +132,19 @@
   .appointment-section {
     padding-top: 75px;
     padding-bottom: 15px;
-    overflow-y: auto;
-    -webkit-overflow-scrolling: touch;
+    overflow: hidden;
+  }
+
+  /* Global Kidney Layer on Mobile (Active 3D Floating Protagonist Animation) */
+  .global-kidney-layer {
+    display: flex !important;
+    z-index: 15;
+    pointer-events: none;
+  }
+
+  .mrblack-kidney-wrapper {
+    width: clamp(160px, 42vw, 220px);
+    height: clamp(180px, 45vw, 240px);
   }
 
   /* Stage 1: Hero Section */
