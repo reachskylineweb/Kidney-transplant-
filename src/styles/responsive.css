@@ -135,17 +135,19 @@
     overflow: hidden;
   }
 
-  /* Global Floating Kidney Background Layer on Mobile */
+  /* Global Floating Kidney Layer on Mobile (Positioned above titles) */
   .global-kidney-layer {
     display: flex !important;
-    z-index: 2; /* Behind text content z-index: 10 */
-    opacity: 0.22;
+    align-items: flex-start;
+    padding-top: 75px;
+    z-index: 15;
+    opacity: 1;
     pointer-events: none;
   }
 
   .mrblack-kidney-wrapper {
-    width: clamp(140px, 38vw, 190px);
-    height: clamp(150px, 40vw, 200px);
+    width: clamp(120px, 32vw, 160px);
+    height: clamp(110px, 28vw, 150px);
   }
 
   /* Stage 1: Hero Section */
@@ -155,8 +157,14 @@
     padding: 0 1rem;
   }
 
+  .mrblack-hero-left {
+    align-items: center;
+    text-align: center;
+    margin-top: 135px; /* Space for floating kidney sitting ABOVE title on Stage 1 */
+  }
+
   .mrblack-hero-title {
-    font-size: clamp(1.3rem, 6vw, 1.9rem);
+    font-size: clamp(1.2rem, 5.5vw, 1.8rem);
     line-height: 1.15;
     margin-bottom: 0.65rem;
     text-align: center;
@@ -195,11 +203,18 @@
 
   /* Stage 2: Transplant Story */
   .story-top-heading {
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .story-top-heading .section-tag {
+    margin-bottom: 125px !important; /* Space for floating kidney sitting ABOVE title on Stage 2 */
   }
 
   .story-main-title {
-    font-size: clamp(1.4rem, 6vw, 2.1rem);
+    font-size: clamp(1.3rem, 6vw, 2.0rem);
   }
 
   .story-paragraph {
