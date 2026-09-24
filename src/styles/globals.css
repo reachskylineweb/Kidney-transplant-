@@ -1,0 +1,259 @@
+/* ==========================================================================
+   GEM HOSPITAL - ABO-INCOMPATIBLE KIDNEY TRANSPLANT
+   GLOBAL DESIGN SYSTEM & EDITORIAL STYLES
+   ========================================================================== */
+
+:root {
+  /* Color System */
+  --color-forest: #0B3D24;
+  --color-forest-dark: #062817;
+  --color-forest-deep: #03170D;
+  --color-forest-light: #165333;
+  --color-cream: #F3F0E7;
+  --color-cream-dark: #E6E1D3;
+  --color-cream-soft: #F9F7F2;
+  --color-white: #FFFFFF;
+  --color-crimson: #B52A2A;
+  --color-crimson-dark: #801B1B;
+  --color-dark: #111111;
+  --color-muted: #555555;
+  --color-muted-light: #9AAEA4;
+  --color-gold: #C5A059;
+
+  /* Typography System */
+  --font-display: 'Syne', sans-serif;
+  --font-serif: 'Cormorant Garamond', serif;
+  --font-sans: 'Plus Jakarta Sans', sans-serif;
+
+  /* Spacing */
+  --nav-height: 80px;
+  --container-padding: clamp(1.5rem, 5vw, 5rem);
+}
+
+/* CSS Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  background-color: #062817;
+  color: var(--color-cream);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* Lenis Smooth Scroll Settings */
+html.lenis, html.lenis body {
+  height: auto;
+  background-color: #062817;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
+
+body {
+  min-height: 100vh;
+  position: relative;
+  background-color: #062817;
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-forest-dark);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-forest-light);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-gold);
+}
+
+/* Signature Dot-Pattern Button Accents (Mr.BLACK Style) */
+.btn-dots {
+  display: inline-flex;
+  gap: 3px;
+  align-items: center;
+}
+
+.btn-dot {
+  width: 3px;
+  height: 3px;
+  background-color: currentColor;
+  border-radius: 50%;
+}
+
+.hero-wordmark-track {
+  position: absolute;
+  bottom: 5vh;
+  left: 0;
+  width: 200%;
+  display: flex;
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0.08;
+  font-family: var(--font-display);
+  font-size: clamp(6rem, 15vw, 16rem);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: -0.04em;
+  color: var(--color-forest-dark);
+  user-select: none;
+  animation: marquee 35s linear infinite;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Editorial Grid & Containers */
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding-left: var(--container-padding);
+  padding-right: var(--container-padding);
+}
+
+.section-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--color-crimson);
+  margin-bottom: 1.5rem;
+}
+
+.section-tag::before {
+  content: '';
+  display: inline-block;
+  width: 16px;
+  height: 2px;
+  background-color: var(--color-crimson);
+}
+
+.section-tag.light {
+  color: var(--color-gold);
+}
+.section-tag.light::before {
+  background-color: var(--color-gold);
+}
+
+/* Magnetic Button Base */
+.magnetic-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 1rem 2.25rem;
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 0px; /* Editorial non-rounded aesthetic */
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  border: none;
+}
+
+.magnetic-btn-primary {
+  background-color: var(--color-forest);
+  color: var(--color-cream);
+  border: 1px solid var(--color-forest-light);
+}
+
+.magnetic-btn-primary::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  transition: left 0.6s ease;
+}
+
+.magnetic-btn-primary:hover::after {
+  left: 100%;
+}
+
+.magnetic-btn-primary:hover {
+  background-color: var(--color-forest-dark);
+  color: var(--color-gold);
+  border-color: var(--color-gold);
+}
+
+.magnetic-btn-secondary {
+  background-color: transparent;
+  color: var(--color-forest);
+  border: 1px solid var(--color-forest);
+}
+
+.magnetic-btn-secondary:hover {
+  background-color: var(--color-forest);
+  color: var(--color-cream);
+}
+
+.magnetic-btn-light {
+  background-color: var(--color-cream);
+  color: var(--color-forest-dark);
+  border: 1px solid var(--color-cream);
+}
+
+.magnetic-btn-light:hover {
+  background-color: var(--color-gold);
+  color: var(--color-forest-dark);
+  border-color: var(--color-gold);
+}
+
+/* Image Object Wrapper */
+.editorial-img-wrapper {
+  position: relative;
+  overflow: hidden;
+  background-color: var(--color-cream-dark);
+}
+
+.editorial-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Selection */
+::selection {
+  background-color: var(--color-forest);
+  color: var(--color-gold);
+}

@@ -1,0 +1,410 @@
+/* ==========================================================================
+   GEM HOSPITAL - COMPLETE MOBILE OPTIMIZATION
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   TABLET & LAPTOP ADJUSTMENTS (768px - 1023px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 1023px) {
+  .mrblack-nav-left {
+    display: none;
+  }
+  
+  .hide-mobile {
+    display: none !important;
+  }
+
+  .mobile-menu-toggle {
+    display: flex !important;
+  }
+
+  .mrblack-hero-container {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    text-align: center;
+  }
+
+  .mrblack-hero-left {
+    align-items: center;
+    text-align: center;
+  }
+
+  .mrblack-hero-desc {
+    max-width: 100%;
+  }
+
+  .mrblack-hero-right {
+    align-items: center;
+    text-align: center;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .mrblack-hero-stat {
+    align-items: center;
+  }
+
+  .story-section-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .story-center-slot {
+    height: 150px;
+  }
+
+  .causes-container {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .types-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .experts-body-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .appointment-body-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   MOBILE SCREENS (320px - 767px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 767px) {
+  :root {
+    --container-padding: 1rem;
+    --nav-height: 70px;
+  }
+
+  /* Header & Navigation */
+  .mrblack-header {
+    height: 70px;
+    padding: 0 1rem;
+  }
+
+  .mrblack-brand-center {
+    position: static;
+    transform: none;
+  }
+
+  .logo-badge {
+    padding: 3px 8px;
+  }
+
+  .mrblack-logo-img {
+    height: 26px;
+  }
+
+  .mrblack-btn-pill {
+    padding: 0.5rem 1rem;
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+  }
+
+  .mobile-menu-toggle {
+    display: flex !important;
+    padding: 5px 8px;
+  }
+
+  .mrblack-mobile-drawer {
+    padding: 1.5rem;
+    gap: 1.5rem;
+  }
+
+  .mobile-drawer-link {
+    font-size: 1.4rem;
+  }
+
+  /* Section Containers on Mobile */
+  .mrblack-hero-section,
+  .story-section-2,
+  .causes-section,
+  .types-section,
+  .experts-section,
+  .appointment-section {
+    padding-top: 75px;
+    padding-bottom: 15px;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Stage 1: Hero Section */
+  .mrblack-hero-container {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 0 1rem;
+  }
+
+  .mrblack-hero-title {
+    font-size: clamp(1.4rem, 6.5vw, 2.1rem);
+    line-height: 1.15;
+    margin-bottom: 0.85rem;
+    text-align: center;
+  }
+
+  .mrblack-hero-desc {
+    font-size: 0.82rem;
+    line-height: 1.5;
+    margin-bottom: 1.25rem;
+    text-align: center;
+  }
+
+  .mrblack-hero-center {
+    display: none;
+  }
+
+  .mrblack-hero-right {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.85rem;
+    text-align: center;
+  }
+
+  .stat-number {
+    font-size: 1.3rem;
+  }
+
+  .stat-label {
+    font-size: 0.68rem;
+  }
+
+  .mrblack-hero-watermark {
+    font-size: clamp(2rem, 11vw, 3.8rem);
+    bottom: 0.5rem;
+  }
+
+  /* Stage 2: Transplant Story */
+  .story-top-heading {
+    margin-bottom: 1.5rem;
+  }
+
+  .story-main-title {
+    font-size: clamp(1.6rem, 7vw, 2.4rem);
+  }
+
+  .story-paragraph {
+    font-size: 0.88rem;
+    line-height: 1.55;
+  }
+
+  .story-paragraph.highlight {
+    font-size: 0.95rem;
+    padding-left: 0.85rem;
+  }
+
+  .story-center-slot {
+    height: 80px;
+  }
+
+  .features-card {
+    padding: 1rem 1.25rem;
+  }
+
+  .features-card-number {
+    font-size: 1.8rem;
+  }
+
+  /* Stage 3: Causes of Kidney Failure */
+  .causes-container {
+    padding: 0 1rem;
+    gap: 1rem;
+  }
+
+  .causes-img-frame {
+    height: clamp(200px, 32vh, 260px);
+  }
+
+  .causes-img {
+    padding: 1rem;
+  }
+
+  .causes-main-title {
+    font-size: clamp(1.4rem, 6vw, 2.1rem);
+    margin-bottom: 0.75rem;
+  }
+
+  .causes-callout-box {
+    padding: 0.75rem 1rem;
+    gap: 0.85rem;
+    margin-bottom: 0.85rem;
+  }
+
+  .callout-stat-badge {
+    font-size: 1.6rem;
+  }
+
+  .callout-text {
+    font-size: 0.82rem;
+  }
+
+  .causes-grid {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+
+  .cause-card {
+    padding: 0.65rem 0.85rem;
+  }
+
+  .cause-title {
+    font-size: 0.85rem;
+  }
+
+  .cause-desc {
+    font-size: 0.75rem;
+  }
+
+  /* Stage 4: Types of Kidney Transplant */
+  .types-container {
+    padding: 0 1rem;
+  }
+
+  .types-main-title {
+    font-size: clamp(1.4rem, 6vw, 2.1rem);
+  }
+
+  .types-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .types-card {
+    padding: 0.9rem 1.1rem;
+    gap: 0.6rem;
+  }
+
+  .types-card-title {
+    font-size: 1rem;
+  }
+
+  .types-card-desc {
+    font-size: 0.78rem;
+  }
+
+  .types-center-frame {
+    height: clamp(180px, 28vh, 230px);
+  }
+
+  /* Stage 5: Our Experts */
+  .experts-container {
+    padding: 0 1rem;
+  }
+
+  .experts-main-title {
+    font-size: clamp(1.5rem, 6vw, 2.2rem);
+  }
+
+  .experts-carousel-wrapper {
+    height: clamp(260px, 38vh, 320px);
+  }
+
+  .expert-details-card {
+    padding: 1rem 1.2rem;
+    gap: 0.6rem;
+  }
+
+  .expert-name {
+    font-size: 1.2rem;
+  }
+
+  .expert-qual {
+    font-size: 0.95rem;
+  }
+
+  .expert-designation {
+    font-size: 0.8rem;
+  }
+
+  .expert-specialty {
+    font-size: 0.78rem;
+  }
+
+  /* Stage 6 & Modal: Book Consultation */
+  .appointment-container {
+    padding: 0 1rem;
+  }
+
+  .appointment-main-title {
+    font-size: clamp(1.5rem, 6vw, 2.2rem);
+  }
+
+  .appointment-body-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .appointment-contact-card {
+    padding: 1rem 1.25rem;
+    gap: 1rem;
+  }
+
+  .contact-value.highlight-phone {
+    font-size: 1.35rem;
+  }
+
+  .contact-subtext {
+    font-size: 0.75rem;
+  }
+
+  .appointment-form-card {
+    padding: 1rem 1.25rem;
+  }
+
+  .appointment-form {
+    grid-template-columns: 1fr;
+    gap: 0.65rem;
+  }
+
+  .form-input,
+  .form-select,
+  .form-textarea {
+    font-size: 16px;
+    padding: 0.55rem 0.8rem;
+  }
+
+  .appointment-modal-overlay {
+    padding: 70px 1rem 1.5rem 1rem;
+    align-items: flex-start;
+  }
+
+  .appointment-modal-close {
+    top: -38px;
+    right: 0;
+    font-size: 0.7rem;
+    padding: 4px 10px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   EXTRA SMALL MOBILE SCREENS (< 480px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 480px) {
+  .mrblack-hero-title {
+    font-size: 1.35rem;
+  }
+
+  .mrblack-btn-pill {
+    padding: 0.5rem 0.85rem;
+    font-size: 0.68rem;
+  }
+
+  .causes-img-frame {
+    height: 180px;
+  }
+
+  .types-center-frame {
+    height: 170px;
+  }
+
+  .experts-carousel-wrapper {
+    height: 240px;
+  }
+}

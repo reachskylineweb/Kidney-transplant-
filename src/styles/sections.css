@@ -1,0 +1,1287 @@
+/* ==========================================================================
+   MR.BLACK EXACT SPECIFICATION STYLES - GEM HOSPITAL LANDING PAGE
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   NAVBAR (MR.BLACK 3-PART HEADER)
+   -------------------------------------------------------------------------- */
+.mrblack-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 75px;
+  z-index: 1000;
+  transition: background-color 0.4s ease, border-color 0.4s ease;
+  padding: 0 var(--container-padding);
+  background-color: #062817;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.mrblack-header.scrolled {
+  background-color: rgba(6, 40, 23, 0.98);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(197, 160, 89, 0.2);
+}
+
+.mrblack-header-inner {
+  max-width: 1440px;
+  margin: 0 auto;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.mrblack-nav-left {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.mrblack-nav-link {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-cream);
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+
+.mrblack-nav-link:hover {
+  opacity: 0.7;
+}
+
+.mrblack-brand-center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-badge {
+  background-color: #FFFFFF;
+  padding: 4px 10px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.mrblack-logo-img {
+  height: 32px;
+  width: auto;
+  object-fit: contain;
+}
+
+.mrblack-nav-right {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.mrblack-btn-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.6rem 1.4rem;
+  background-color: var(--color-cream);
+  color: var(--color-forest-dark);
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.mrblack-btn-pill:hover {
+  background-color: var(--color-gold);
+  transform: translateY(-2px);
+}
+
+.mobile-menu-toggle {
+  display: none !important;
+  background: rgba(255, 255, 255, 0.95);
+  color: #062817;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Mobile Drawer */
+.mrblack-mobile-drawer {
+  position: fixed;
+  inset: 0;
+  background-color: #062817;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.mobile-drawer-link {
+  background: none;
+  border: none;
+  color: #F3F0E7;
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* --------------------------------------------------------------------------
+   HERO + SECTION 2 PINNED CONTAINER (REVERSIBLE SMOOTH CHOREOGRAPHY)
+   -------------------------------------------------------------------------- */
+.hero-story-pinned-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-color: #062817;
+  overflow: hidden;
+}
+
+/* GLOBAL PINNED KIDNEY LAYER - Z-INDEX 20 */
+.global-kidney-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 20;
+  pointer-events: none;
+}
+
+.mrblack-kidney-wrapper {
+  width: clamp(280px, 24vw, 380px);
+  height: clamp(300px, 26vw, 420px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mrblack-kidney-img.isolated-kidney {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 25px 50px rgba(0, 0, 0, 0.85));
+  will-change: transform, opacity;
+}
+
+/* --------------------------------------------------------------------------
+   HERO SECTION
+   -------------------------------------------------------------------------- */
+.mrblack-hero-section {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #062817;
+  color: var(--color-cream);
+  padding-top: 75px;
+  display: flex;
+  align-items: center;
+  z-index: 5;
+}
+
+.mrblack-hero-container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1fr;
+  align-items: center;
+  gap: 1.5rem;
+  position: relative;
+  z-index: 10;
+}
+
+.mrblack-hero-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  z-index: 10;
+}
+
+.mrblack-hero-title {
+  font-family: var(--font-sans);
+  font-size: clamp(1.4rem, 2.2vw, 2.4rem);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  color: var(--color-cream);
+  margin-bottom: 1.25rem;
+}
+
+.mrblack-hero-desc {
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  color: #9AAEA4;
+  line-height: 1.6;
+  max-width: 360px;
+  margin-bottom: 1.75rem;
+}
+
+.mrblack-apply-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: none;
+  border: none;
+  color: var(--color-cream);
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-bottom: 2px solid var(--color-cream);
+  padding-bottom: 0.4rem;
+  transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.mrblack-apply-btn:hover {
+  color: var(--color-gold);
+  border-color: var(--color-gold);
+}
+
+.mrblack-hero-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+.mrblack-hero-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2.5rem;
+  text-align: right;
+  z-index: 10;
+}
+
+.mrblack-hero-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.stat-number {
+  font-family: var(--font-display);
+  font-size: clamp(1.4rem, 2vw, 2.2rem);
+  font-weight: 800;
+  color: var(--color-cream);
+  line-height: 1;
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+}
+
+.stat-label {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: #9AAEA4;
+  margin-top: 0.35rem;
+  white-space: nowrap;
+}
+
+.mrblack-hero-watermark {
+  position: absolute;
+  bottom: 2vw;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  text-align: center;
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 8vw, 7.5rem);
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  color: rgba(243, 240, 231, 0.12);
+  white-space: nowrap;
+  pointer-events: none;
+  z-index: 1;
+  user-select: none;
+  line-height: 0.8;
+}
+
+/* --------------------------------------------------------------------------
+   SECTION 2: KIDNEY TRANSPLANT STORY & FIGURES
+   -------------------------------------------------------------------------- */
+.story-section-2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #03170D; /* Rich Dark Contrast Green */
+  color: var(--color-cream);
+  padding-top: 75px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 10;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.story-section-2-container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+}
+
+.story-section-2-content {
+  position: relative;
+  width: 100%;
+}
+
+.story-top-heading {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+.story-main-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.2rem, 4.5vw, 4.2rem);
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--color-cream);
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+
+.story-section-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1.1fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+.story-body-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.story-paragraph {
+  font-family: var(--font-sans);
+  font-size: 1.05rem;
+  color: #C5D6CC;
+  line-height: 1.7;
+}
+
+.story-paragraph.highlight {
+  border-left: 3px solid var(--color-crimson);
+  padding-left: 1.25rem;
+  color: var(--color-cream);
+  font-size: 1.15rem;
+}
+
+.story-center-slot {
+  height: 380px;
+}
+
+.story-stats-right {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.features-card {
+  background: rgba(11, 61, 36, 0.6);
+  border: 1px solid rgba(197, 160, 89, 0.2);
+  padding: 1.5rem 1.8rem;
+  border-left: 3px solid var(--color-gold);
+}
+
+.features-card-caption {
+  font-family: var(--font-sans);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  color: var(--color-gold);
+  display: block;
+  margin-bottom: 0.4rem;
+}
+
+.features-card-number {
+  font-family: var(--font-display);
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--color-cream);
+  line-height: 1;
+  display: block;
+  margin-bottom: 0.4rem;
+}
+
+.features-card-desc {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  color: #9AAEA4;
+  line-height: 1.5;
+}
+
+/* Responsive Rules */
+@media (max-width: 1023px) {
+  .story-section-grid {
+    grid-template-columns: 1fr;
+  }
+  .global-kidney-layer {
+    display: none;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   SECTION 3: CAUSES OF KIDNEY FAILURE (MR.BLACK LOUNGE SPECIFICATION)
+   -------------------------------------------------------------------------- */
+.causes-section {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #03170D; /* Dark contrast green */
+  color: var(--color-cream);
+  padding-top: 95px;
+  padding-bottom: 25px;
+  display: flex;
+  align-items: flex-start;
+  z-index: 30;
+  pointer-events: none;
+}
+
+.causes-container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+/* Left Image Frame */
+.causes-left-col {
+  position: relative;
+  width: 100%;
+}
+
+.causes-img-frame {
+  position: relative;
+  width: 100%;
+  height: clamp(360px, 50vh, 520px);
+  background: rgba(6, 40, 23, 0.8);
+  border: 1px solid rgba(197, 160, 89, 0.25);
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.causes-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 2rem;
+  filter: drop-shadow(0 25px 50px rgba(0, 0, 0, 0.9));
+  will-change: transform;
+}
+
+.causes-img-overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, transparent 40%, rgba(3, 23, 13, 0.7) 100%);
+  pointer-events: none;
+}
+
+.causes-img-badge {
+  position: absolute;
+  bottom: 1.25rem;
+  left: 1.25rem;
+  background: rgba(6, 40, 23, 0.92);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(197, 160, 89, 0.3);
+  padding: 0.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.causes-img-badge span {
+  font-family: var(--font-sans);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  color: var(--color-gold);
+}
+
+.causes-img-badge strong {
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  color: var(--color-cream);
+  letter-spacing: 0.05em;
+}
+
+/* Right Content Column */
+.causes-right-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.causes-header-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.causes-section-num {
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  color: var(--color-gold);
+}
+
+.causes-main-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 2.8vw, 2.6rem);
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--color-cream);
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  margin-bottom: 1rem;
+}
+
+.causes-callout-box {
+  background: rgba(181, 42, 42, 0.12);
+  border-left: 4px solid var(--color-crimson);
+  padding: 0.85rem 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.callout-stat-badge {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 800;
+  color: #FF4D4D;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.callout-text {
+  font-family: var(--font-sans);
+  font-size: 0.92rem;
+  color: var(--color-cream);
+  line-height: 1.45;
+}
+
+.causes-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.85rem;
+  margin-bottom: 1.25rem;
+}
+
+.cause-card {
+  background: rgba(11, 61, 36, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 0.85rem 1.1rem;
+  display: flex;
+  gap: 0.8rem;
+  align-items: flex-start;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.cause-card:hover {
+  border-color: var(--color-gold);
+  background: rgba(11, 61, 36, 0.85);
+}
+
+.cause-num {
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 800;
+  color: var(--color-gold);
+  letter-spacing: 0.1em;
+  margin-top: 2px;
+}
+
+.cause-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.cause-title {
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--color-cream);
+  margin-bottom: 0.15rem;
+}
+
+.cause-desc {
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  color: #9AAEA4;
+  line-height: 1.35;
+}
+
+.causes-inset-card {
+  background: rgba(6, 40, 23, 0.9);
+  border: 1px solid rgba(197, 160, 89, 0.3);
+  padding: 0.85rem 1.4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.inset-caption {
+  font-family: var(--font-sans);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  color: var(--color-gold);
+  display: block;
+  margin-bottom: 0.15rem;
+}
+
+.inset-value {
+  font-family: var(--font-display);
+  font-size: 0.98rem;
+  font-weight: 800;
+  color: var(--color-cream);
+  margin-bottom: 0.15rem;
+}
+
+.inset-desc {
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  color: #9AAEA4;
+}
+
+@media (max-width: 1023px) {
+  .causes-container {
+    grid-template-columns: 1fr;
+  }
+  .causes-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   SECTION 4: TYPES OF KIDNEY TRANSPLANT (STAGE 4 OVERLAY)
+   -------------------------------------------------------------------------- */
+.types-section {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #062817; /* Rich deep green background */
+  color: var(--color-cream);
+  padding-top: 85px;
+  padding-bottom: 20px;
+  display: flex;
+  align-items: center;
+  z-index: 40;
+  pointer-events: none;
+}
+
+.types-container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.types-header {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.types-main-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 2.6vw, 2.5rem);
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--color-cream);
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+
+.types-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr 1.1fr;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.types-card {
+  background: rgba(11, 61, 36, 0.6);
+  border: 1px solid rgba(197, 160, 89, 0.25);
+  padding: 1.1rem 1.3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.types-card:hover {
+  border-color: var(--color-gold);
+  background: rgba(11, 61, 36, 0.9);
+}
+
+.types-card-tag {
+  font-family: var(--font-sans);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  color: var(--color-gold);
+  text-transform: uppercase;
+}
+
+.types-card-title {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--color-cream);
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.types-card-desc {
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  color: #C5D6CC;
+  line-height: 1.45;
+}
+
+.types-checklist {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.types-checklist li {
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--color-cream);
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.types-checklist li::before {
+  content: '✓';
+  color: var(--color-gold);
+  font-weight: 800;
+}
+
+/* Center Image Frame */
+.types-center-frame {
+  position: relative;
+  width: 100%;
+  height: clamp(260px, 36vh, 350px);
+  background: rgba(3, 23, 13, 0.8);
+  border: 1px solid rgba(197, 160, 89, 0.3);
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.types-img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  padding: 1rem;
+  filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.85));
+}
+
+.types-center-badge {
+  position: absolute;
+  bottom: 0.75rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(6, 40, 23, 0.95);
+  border: 1px solid rgba(197, 160, 89, 0.3);
+  padding: 0.3rem 0.8rem;
+  white-space: nowrap;
+  font-family: var(--font-sans);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  color: var(--color-gold);
+}
+
+.types-bottom-cta {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.25rem;
+}
+
+@media (max-width: 1023px) {
+  .types-grid {
+    grid-template-columns: 1fr;
+  }
+  .types-center-frame {
+    height: 260px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   SECTION 5: OUR EXPERTS (STAGE 5 OVERLAY WITH DEPTH CAROUSEL)
+   -------------------------------------------------------------------------- */
+.experts-section {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #03170D; /* Dark contrast green */
+  color: var(--color-cream);
+  padding-top: 85px;
+  padding-bottom: 20px;
+  display: flex;
+  align-items: center;
+  z-index: 50;
+  pointer-events: none;
+}
+
+.experts-container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.experts-header {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.experts-main-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 3.2vw, 2.8rem);
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--color-cream);
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+
+.experts-body-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.experts-carousel-wrapper {
+  position: relative;
+  width: 100%;
+  height: clamp(320px, 45vh, 400px);
+}
+
+.expert-details-card {
+  background: rgba(11, 61, 36, 0.65);
+  border: 1px solid rgba(197, 160, 89, 0.3);
+  padding: 1.5rem 1.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+}
+
+.expert-badge {
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+  color: var(--color-gold);
+  text-transform: uppercase;
+}
+
+.expert-name {
+  font-family: var(--font-display);
+  font-size: clamp(1.3rem, 2vw, 1.7rem);
+  font-weight: 800;
+  color: var(--color-cream);
+  line-height: 1.15;
+  text-transform: uppercase;
+}
+
+.expert-qual {
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  font-style: italic;
+  color: var(--color-gold);
+  margin-top: -0.2rem;
+}
+
+.expert-designation {
+  font-family: var(--font-sans);
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #C5D6CC;
+}
+
+.expert-specialty {
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  color: #9AAEA4;
+  line-height: 1.45;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 0.6rem;
+}
+
+.expert-highlights {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.expert-highlights li {
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--color-cream);
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.expert-highlights li::before {
+  content: '✓';
+  color: var(--color-gold);
+  font-weight: 800;
+}
+
+@media (max-width: 1023px) {
+  .experts-body-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   SECTION 6: BOOK CONSULTATION (STAGE 6 OVERLAY WITH FORM & ADDRESS)
+   -------------------------------------------------------------------------- */
+.appointment-section {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #062817; /* Rich deep green background */
+  color: var(--color-cream);
+  padding-top: 80px;
+  padding-bottom: 20px;
+  display: flex;
+  align-items: center;
+  z-index: 60;
+  pointer-events: none;
+}
+
+.appointment-container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.appointment-header {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.appointment-main-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 3.2vw, 2.8rem);
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--color-cream);
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+
+.appointment-body-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+/* Left Contact Info Card */
+.appointment-contact-card {
+  background: rgba(3, 23, 13, 0.85);
+  border: 1px solid rgba(197, 160, 89, 0.3);
+  padding: 1.5rem 1.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+}
+
+.contact-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding-bottom: 0.8rem;
+}
+
+.contact-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.contact-label {
+  font-family: var(--font-sans);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  color: var(--color-gold);
+  text-transform: uppercase;
+}
+
+.contact-value {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--color-cream);
+  text-decoration: none;
+}
+
+.contact-value.highlight-phone {
+  font-size: 1.6rem;
+  color: var(--color-gold);
+  letter-spacing: 0.05em;
+}
+
+.contact-subtext {
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  color: #9AAEA4;
+  line-height: 1.45;
+}
+
+/* Right Form Card */
+.appointment-form-card {
+  background: rgba(11, 61, 36, 0.65);
+  border: 1px solid rgba(197, 160, 89, 0.3);
+  padding: 1.5rem 1.8rem;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+}
+
+.appointment-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.85rem;
+}
+
+.form-group-full {
+  grid-column: 1 / -1;
+}
+
+.form-label {
+  font-family: var(--font-sans);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  color: var(--color-gold);
+  text-transform: uppercase;
+  margin-bottom: 0.3rem;
+  display: block;
+}
+
+.form-input,
+.form-select,
+.form-textarea {
+  width: 100%;
+  background: rgba(3, 23, 13, 0.9);
+  border: 1px solid rgba(197, 160, 89, 0.3);
+  padding: 0.6rem 0.9rem;
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  color: var(--color-cream);
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
+  border-color: var(--color-gold);
+}
+
+.form-select option {
+  background: #03170D;
+  color: #F3F0E7;
+}
+
+.form-textarea {
+  resize: none;
+  height: 60px;
+}
+
+.form-submit-btn {
+  width: 100%;
+  margin-top: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background: var(--color-cream);
+  color: var(--color-forest-dark);
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+}
+
+.form-submit-btn:hover {
+  background: var(--color-gold);
+  transform: translateY(-2px);
+}
+
+.form-success-msg {
+  background: rgba(11, 61, 36, 0.9);
+  border: 1px solid var(--color-gold);
+  padding: 0.75rem 1rem;
+  color: var(--color-gold);
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+@media (max-width: 1023px) {
+  .appointment-body-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .appointment-form {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   DIRECT BOOK CONSULTATION OVERLAY MODAL (OVERLAYS CURRENT SECTION DIRECTLY)
+   -------------------------------------------------------------------------- */
+.appointment-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  background-color: rgba(6, 40, 23, 0.98);
+  backdrop-filter: blur(12px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 85px 2rem 2rem 2rem;
+  overflow-y: auto;
+  animation: modalSlideUp 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes modalSlideUp {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.appointment-modal-inner {
+  position: relative;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.appointment-modal-close {
+  position: absolute;
+  top: -45px;
+  right: 0;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(197, 160, 89, 0.4);
+  color: var(--color-gold);
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  padding: 6px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+.appointment-modal-close:hover {
+  background: var(--color-gold);
+  color: var(--color-forest-dark);
+}
+
+
+
+
+
