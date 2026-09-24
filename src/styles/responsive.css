@@ -207,14 +207,17 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
   }
 
   .story-top-heading .section-tag {
-    margin-bottom: 125px !important; /* Space for floating kidney sitting ABOVE title on Stage 2 */
+    margin-bottom: 0.25rem !important;
   }
 
   .story-main-title {
     font-size: clamp(1.3rem, 6vw, 2.0rem);
+    text-align: center;
+    margin-top: 95px; /* Space for kidney sitting ABOVE title on Stage 2 */
   }
 
   .story-paragraph {

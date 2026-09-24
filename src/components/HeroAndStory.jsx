@@ -137,9 +137,9 @@ export const HeroAndStory = () => {
         .to(
           kidneyRef.current,
           {
-            y: '16vh',
+            y: '10vh',
             rotation: 360,
-            scale: 1.1,
+            scale: 1.0,
             duration: 1.2,
             ease: 'power1.inOut'
           },
