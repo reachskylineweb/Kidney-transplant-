@@ -60,7 +60,7 @@ export const Navbar = () => {
             </a>
             <button
               onClick={() => scrollToSection('appointment')}
-              className="mrblack-btn-pill"
+              className="mrblack-btn-pill hide-mobile"
             >
               <span className="btn-dots">
                 <span className="btn-dot"></span>

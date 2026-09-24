@@ -170,6 +170,16 @@ export const HeroAndStory = () => {
           }
         )
         .to(
+          section2Ref.current,
+          {
+            opacity: 0,
+            pointerEvents: 'none',
+            duration: 1.2,
+            ease: 'power1.inOut'
+          },
+          '<'
+        )
+        .to(
           kidneyRef.current,
           {
             autoAlpha: 0,
@@ -202,6 +212,16 @@ export const HeroAndStory = () => {
           }
         )
         .to(
+          section3Ref.current,
+          {
+            opacity: 0,
+            pointerEvents: 'none',
+            duration: 1.2,
+            ease: 'power1.inOut'
+          },
+          '<'
+        )
+        .to(
           img4Ref.current,
           {
             scale: 1.0,
@@ -224,6 +244,16 @@ export const HeroAndStory = () => {
             ease: 'power2.inOut'
           }
         )
+        .to(
+          section4Ref.current,
+          {
+            opacity: 0,
+            pointerEvents: 'none',
+            duration: 1.2,
+            ease: 'power1.inOut'
+          },
+          '<'
+        )
         .to({}, { duration: 1.2 })
 
       // =========================================================
@@ -237,6 +267,16 @@ export const HeroAndStory = () => {
             duration: 1.8,
             ease: 'power2.inOut'
           }
+        )
+        .to(
+          section5Ref.current,
+          {
+            opacity: 0,
+            pointerEvents: 'none',
+            duration: 1.2,
+            ease: 'power1.inOut'
+          },
+          '<'
         )
         .to({}, { duration: 1.5 });
 
