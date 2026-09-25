@@ -336,9 +336,22 @@
   }
 
   /* Stage 3: Causes of Kidney Failure */
+  .causes-section {
+    padding-top: 60px;
+    padding-bottom: 15px;
+    height: 100vh;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-y: auto;
+  }
+
   .causes-container {
     padding: 0 1rem;
-    gap: 0.75rem;
+    gap: 0.6rem;
+    grid-template-columns: 1fr;
+    width: 100%;
   }
 
   .causes-header-meta {
@@ -346,55 +359,72 @@
   }
 
   .causes-img-frame {
-    height: clamp(130px, 20vh, 170px);
+    height: clamp(140px, 20vh, 185px);
   }
 
   .causes-img {
-    padding: 0.5rem;
+    padding: 0.4rem;
   }
 
   .causes-main-title {
-    font-size: clamp(1.2rem, 5.5vw, 1.8rem);
-    margin-bottom: 0.5rem;
+    font-size: clamp(1.2rem, 5.2vw, 1.65rem);
+    margin-bottom: 0.45rem;
+    line-height: 1.15;
   }
 
   .causes-callout-box {
-    padding: 0.5rem 0.85rem;
+    padding: 0.6rem 0.85rem;
     gap: 0.75rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.55rem;
+    background: rgba(181, 42, 42, 0.15);
+    border-left: 3px solid var(--color-crimson);
+    border-radius: 0 6px 6px 0;
   }
 
   .callout-stat-badge {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
+    font-weight: 800;
   }
 
   .callout-text {
     font-size: 0.78rem;
+    line-height: 1.35;
   }
 
   .causes-grid {
     grid-template-columns: 1fr 1fr;
-    gap: 0.4rem;
-    margin-bottom: 0.5rem;
+    gap: 0.5rem;
+    margin-bottom: 0.35rem;
   }
 
   .cause-card {
-    padding: 0.5rem 0.65rem;
-    gap: 0.4rem;
+    padding: 0.6rem 0.7rem;
+    gap: 0.3rem;
+    background: rgba(6, 40, 23, 0.75);
+    border: 1px solid rgba(197, 160, 89, 0.25);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
   }
 
   .cause-num {
-    font-size: 0.65rem;
+    font-size: 0.68rem;
+    font-weight: 800;
+    color: var(--color-gold);
   }
 
   .cause-title {
-    font-size: 0.78rem;
-    line-height: 1.15;
+    font-size: 0.8rem;
+    line-height: 1.2;
+    margin-bottom: 0.1rem;
+    color: var(--color-cream);
   }
 
   .cause-desc {
     font-size: 0.68rem;
-    line-height: 1.25;
+    line-height: 1.3;
+    color: #9AAEA4;
   }
 
   /* Stage 4: Types of Kidney Transplant */
