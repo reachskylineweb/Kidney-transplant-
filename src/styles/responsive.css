@@ -475,38 +475,104 @@
   }
 
   /* Stage 5: Our Experts */
+  .experts-section {
+    padding-top: 80px;
+    padding-bottom: 20px;
+    height: 100vh;
+    overflow: hidden;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
   .experts-container {
     padding: 0 1rem;
+    width: 100%;
+    box-sizing: border-box;
   }
 
   .experts-header {
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.25rem;
+    text-align: center;
   }
 
   .experts-main-title {
-    font-size: clamp(1.2rem, 5.5vw, 1.8rem);
+    font-size: clamp(1.2rem, 5.2vw, 1.6rem);
+    margin-bottom: 0.15rem;
+    line-height: 1.1;
   }
 
   .experts-body-grid {
-    grid-template-columns: 1fr;
-    gap: 0.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    width: 100%;
   }
 
   .experts-carousel-wrapper {
-    height: clamp(200px, 30vh, 250px);
+    height: 180px;
+    width: 100%;
+    margin-bottom: 0.25rem;
+    position: relative;
+    z-index: 5;
   }
 
   .expert-details-card {
-    padding: 0.75rem 1rem;
-    gap: 0.4rem;
+    padding: 0.65rem 0.85rem;
+    background: rgba(6, 40, 23, 0.85);
+    border: 1px solid rgba(197, 160, 89, 0.3);
+    border-radius: 10px;
+    margin-top: 0.2rem;
+    position: relative;
+    z-index: 10;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+
+  .expert-badge {
+    font-size: 0.52rem;
+    padding: 2px 7px;
+    display: inline-block;
+    align-self: flex-start;
+    margin-bottom: 2px;
   }
 
   .expert-name {
     font-size: 1.1rem;
+    font-weight: 800;
+    color: var(--color-gold);
+    margin: 2px 0;
+    line-height: 1.15;
   }
 
   .expert-qual {
-    font-size: 0.85rem;
+    font-size: 0.72rem;
+    color: var(--color-cream);
+    margin-bottom: 2px;
+  }
+
+  .expert-designation {
+    font-size: 0.7rem;
+    color: #9AAEA4;
+    margin-bottom: 0.25rem;
+  }
+
+  .expert-specialty {
+    font-size: 0.68rem;
+    line-height: 1.25;
+    margin-bottom: 0.25rem;
+  }
+
+  .expert-highlights {
+    margin-bottom: 0.25rem;
+  }
+
+  .expert-highlights li {
+    font-size: 0.65rem;
+    line-height: 1.2;
   }
 
   .expert-designation {

@@ -23,6 +23,9 @@ export const HeroAndStory = () => {
   const [activeExpertIndex, setActiveExpertIndex] = useState(0);
   const [submitted, setSubmitted] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [windowWidth, setWindowWidth] = useState(
+    typeof window !== 'undefined' ? window.innerWidth : 1200
+  );
   const [formData, setFormData] = useState({
     name: '',
     phone: '',
@@ -31,6 +34,12 @@ export const HeroAndStory = () => {
     preferredDate: '',
     notes: ''
   });
+
+  useEffect(() => {
+    const handleResize = () => setWindowWidth(window.innerWidth);
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   const EXPERTS_DATA = [
     {
@@ -655,14 +664,14 @@ export const HeroAndStory = () => {
             <div className="experts-carousel-wrapper">
               <DepthCarousel
                 items={expertCarouselItems}
-                cardWidth={260}
-                cardHeight={320}
-                depth={180}
-                spread={75}
-                tilt={18}
+                cardWidth={windowWidth <= 768 ? 180 : 260}
+                cardHeight={windowWidth <= 768 ? 175 : 320}
+                depth={windowWidth <= 768 ? 80 : 180}
+                spread={windowWidth <= 768 ? 40 : 75}
+                tilt={windowWidth <= 768 ? 10 : 18}
                 tiltDirection="right"
-                perspective={1400}
-                visibleCards={4}
+                perspective={windowWidth <= 768 ? 1000 : 1400}
+                visibleCards={windowWidth <= 768 ? 3 : 4}
                 falloff={0.2}
                 blur={4}
                 autoplay={true}
