@@ -10,6 +10,7 @@ export const HeroAndStory = () => {
   const containerRef = useRef(null);
   const heroRef = useRef(null);
   const kidneyRef = useRef(null);
+  const slotRef = useRef(null);
   const section2Ref = useRef(null);
   const section3Ref = useRef(null);
   const section4Ref = useRef(null);
@@ -95,6 +96,20 @@ export const HeroAndStory = () => {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
+      const getStage2KidneyY = () => {
+        if (typeof window === 'undefined') return '38vh';
+        if (window.innerWidth > 768) return '38vh';
+        if (slotRef.current && kidneyRef.current) {
+          const kRect = kidneyRef.current.getBoundingClientRect();
+          const sRect = slotRef.current.getBoundingClientRect();
+          const kCenter = kRect.top + kRect.height / 2;
+          const sCenter = sRect.top + sRect.height / 2;
+          const deltaY = sCenter - kCenter;
+          if (deltaY > 0) return deltaY;
+        }
+        return '26vh';
+      };
+
       // Master pinned timeline across 6 stages for 100% reversible scroll choreography
       const tl = gsap.timeline({
         scrollTrigger: {
@@ -137,9 +152,9 @@ export const HeroAndStory = () => {
         .to(
           kidneyRef.current,
           {
-            y: () => (window.innerWidth <= 768 ? '18vh' : '38vh'),
+            y: getStage2KidneyY,
             rotation: 360,
-            scale: () => (window.innerWidth <= 768 ? 0.75 : 0.95),
+            scale: () => (window.innerWidth <= 768 ? 0.68 : 0.95),
             duration: 1.2,
             ease: 'power1.inOut'
           },
@@ -478,7 +493,7 @@ export const HeroAndStory = () => {
             </div>
 
             {/* Center Slot reserved for Kidney landing in center */}
-            <div className="story-center-slot"></div>
+            <div ref={slotRef} className="story-center-slot"></div>
 
             {/* Right Corner Stat Cards */}
             <div className="story-stats-right">
