@@ -244,33 +244,28 @@
   .story-section-grid {
     display: flex;
     flex-direction: column;
-    gap: 0.4rem;
-  }
-
-  .story-body-content {
     gap: 0.35rem;
   }
 
-  .story-paragraph {
-    font-size: 0.78rem;
-    line-height: 1.35;
-  }
-
-  .story-paragraph.highlight {
-    font-size: 0.82rem;
-    padding-left: 0.6rem;
-  }
-
-  .story-center-slot {
-    height: 110px; /* Kidney protagonist lands in center slot */
+  .story-body-content {
+    order: 1;
+    gap: 0.35rem;
   }
 
   .story-stats-right {
+    order: 2;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 0.4rem;
     width: 100%;
     box-sizing: border-box;
+    margin-top: 0.2rem;
+  }
+
+  .story-center-slot {
+    order: 3;
+    height: 235px; /* Kidney protagonist lands in marked place at bottom */
+    width: 100%;
   }
 
   .features-card {
