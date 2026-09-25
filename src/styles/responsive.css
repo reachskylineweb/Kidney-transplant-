@@ -139,20 +139,20 @@
   .global-kidney-layer {
     display: flex !important;
     align-items: flex-start;
-    padding-top: 70px;
+    padding-top: 65px;
     z-index: 15;
     opacity: 1;
     pointer-events: none;
   }
 
   .mrblack-kidney-wrapper {
-    width: clamp(115px, 28vw, 145px);
-    height: clamp(100px, 25vw, 125px);
+    width: clamp(210px, 58vw, 280px);
+    height: clamp(175px, 48vw, 230px);
   }
 
   /* Stage 1: Hero Section */
   .mrblack-hero-section {
-    padding-top: 70px;
+    padding-top: 65px;
     justify-content: flex-start;
   }
 
@@ -165,7 +165,7 @@
   .mrblack-hero-left {
     align-items: center;
     text-align: center;
-    margin-top: 115px; /* Space for floating kidney sitting ABOVE title on Stage 1 */
+    margin-top: 190px; /* Space for larger floating kidney image sitting ABOVE title on Stage 1 */
   }
 
   .mrblack-hero-title {
