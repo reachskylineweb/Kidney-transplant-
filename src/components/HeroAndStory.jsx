@@ -23,6 +23,7 @@ export const HeroAndStory = () => {
   const [activeExpertIndex, setActiveExpertIndex] = useState(0);
   const [submitted, setSubmitted] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [mobileStage6Tab, setMobileStage6Tab] = useState('form');
   const [windowWidth, setWindowWidth] = useState(
     typeof window !== 'undefined' ? window.innerWidth : 1200
   );
@@ -722,7 +723,25 @@ export const HeroAndStory = () => {
             <h2 className="appointment-main-title">BOOK CONSULTATION</h2>
           </div>
 
-          <div className="appointment-body-grid">
+          {/* Mobile Tab Toggle Bar */}
+          <div className="stage6-mobile-tabs">
+            <button
+              type="button"
+              className={`stage6-tab-btn ${mobileStage6Tab === 'form' ? 'active' : ''}`}
+              onClick={() => setMobileStage6Tab('form')}
+            >
+              📝 CONSULTATION FORM
+            </button>
+            <button
+              type="button"
+              className={`stage6-tab-btn ${mobileStage6Tab === 'contact' ? 'active' : ''}`}
+              onClick={() => setMobileStage6Tab('contact')}
+            >
+              📞 DIRECT CONTACT
+            </button>
+          </div>
+
+          <div className={`appointment-body-grid mobile-tab-${mobileStage6Tab}`}>
             {/* LEFT SIDE: DIRECT CONTACT & ADDRESS CARD */}
             <div className="appointment-contact-card">
               <div className="contact-item">

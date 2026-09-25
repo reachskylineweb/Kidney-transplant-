@@ -589,8 +589,8 @@
 
   /* Stage 6 & Modal: Book Consultation */
   .appointment-section {
-    padding-top: 60px;
-    padding-bottom: 10px;
+    padding-top: 65px;
+    padding-bottom: 20px;
     height: 100vh;
     overflow: hidden;
     box-sizing: border-box;
@@ -600,50 +600,94 @@
   }
 
   .appointment-container {
-    padding: 0 0.75rem;
+    padding: 0 1rem;
     width: 100%;
     box-sizing: border-box;
   }
 
   .appointment-header {
-    margin-bottom: 0.2rem;
+    margin-bottom: 0.35rem;
     text-align: center;
   }
 
   .appointment-header .section-tag {
-    font-size: 0.52rem;
-    letter-spacing: 0.1em;
-    margin-bottom: 1px !important;
+    font-size: 0.58rem;
+    letter-spacing: 0.12em;
+    margin-bottom: 2px !important;
   }
 
   .appointment-main-title {
-    font-size: clamp(1.1rem, 4.5vw, 1.3rem);
+    font-size: clamp(1.15rem, 5vw, 1.45rem);
     margin-top: 0;
     line-height: 1.1;
+  }
+
+  /* Mobile Tab Toggle Bar */
+  .stage6-mobile-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 0.6rem;
+    width: 100%;
+  }
+
+  .stage6-tab-btn {
+    flex: 1;
+    padding: 0.5rem 0.6rem;
+    background: rgba(3, 23, 13, 0.85);
+    border: 1px solid rgba(197, 160, 89, 0.3);
+    color: #9AAEA4;
+    font-family: var(--font-sans);
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    text-align: center;
+  }
+
+  .stage6-tab-btn.active {
+    background: var(--color-gold);
+    color: #03170D;
+    border-color: var(--color-gold);
+    font-weight: 800;
+    box-shadow: 0 4px 14px rgba(197, 160, 89, 0.35);
   }
 
   .appointment-body-grid {
     display: flex;
     flex-direction: column;
-    gap: 0.25rem;
     width: 100%;
   }
 
+  /* When mobileTab is 'form', hide contact card on mobile */
+  .appointment-body-grid.mobile-tab-form .appointment-contact-card {
+    display: none !important;
+  }
+
+  /* When mobileTab is 'contact', hide form card on mobile */
+  .appointment-body-grid.mobile-tab-contact .appointment-form-card {
+    display: none !important;
+  }
+
+  /* Spacious, Un-Congested Contact Card on Mobile */
   .appointment-contact-card {
-    padding: 0.35rem 0.6rem;
-    gap: 0.15rem;
-    background: rgba(3, 23, 13, 0.75);
-    border: 1px solid rgba(197, 160, 89, 0.25);
-    border-radius: 6px;
+    padding: 1.1rem 1.25rem;
+    gap: 0.85rem;
+    background: rgba(3, 23, 13, 0.85);
+    border: 1px solid rgba(197, 160, 89, 0.3);
+    border-radius: 12px;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
+    width: 100%;
   }
 
   .contact-item {
-    gap: 0.05rem;
-    padding-bottom: 0.1rem;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    gap: 0.25rem;
+    padding-bottom: 0.65rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   }
 
   .contact-item:last-child {
@@ -652,49 +696,53 @@
   }
 
   .contact-label {
-    font-size: 0.45rem;
-    letter-spacing: 0.08em;
+    font-size: 0.58rem;
+    letter-spacing: 0.15em;
     color: var(--color-gold);
   }
 
   .contact-value {
-    font-size: 0.72rem;
-    word-break: normal;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    font-size: 0.9rem;
+    word-break: break-word;
+    overflow-wrap: anywhere;
+    white-space: normal;
     color: var(--color-cream);
   }
 
   .contact-value.highlight-phone {
-    font-size: 0.9rem;
+    font-size: 1.25rem;
     color: var(--color-gold);
     font-weight: 800;
   }
 
   .contact-subtext {
-    display: none; /* Hide verbose helper text on mobile to ensure form & button are 100% visible */
+    font-size: 0.72rem;
+    line-height: 1.35;
+    color: #9AAEA4;
+    display: block;
   }
 
+  /* Spacious, Un-Congested Form Card on Mobile */
   .appointment-form-card {
-    padding: 0.4rem 0.6rem;
-    background: rgba(6, 40, 23, 0.8);
-    border: 1px solid rgba(197, 160, 89, 0.25);
-    border-radius: 8px;
+    padding: 0.85rem 1rem;
+    background: rgba(6, 40, 23, 0.85);
+    border: 1px solid rgba(197, 160, 89, 0.3);
+    border-radius: 12px;
     box-sizing: border-box;
+    width: 100%;
   }
 
   .appointment-form {
     display: flex;
     flex-direction: column;
-    gap: 0.18rem;
+    gap: 0.4rem;
     width: 100%;
   }
 
   .form-label {
-    font-size: 0.48rem;
-    letter-spacing: 0.06em;
-    margin-bottom: 1px;
+    font-size: 0.58rem;
+    letter-spacing: 0.1em;
+    margin-bottom: 2px;
     display: block;
     color: var(--color-gold);
   }
@@ -703,28 +751,29 @@
   .form-select,
   .form-textarea {
     font-size: 16px;
-    padding: 0.15rem 0.4rem;
-    height: 27px;
+    padding: 0.35rem 0.65rem;
+    height: 36px;
     box-sizing: border-box;
     width: 100%;
-    border-radius: 4px;
+    border-radius: 6px;
     background: rgba(3, 23, 13, 0.85);
     border: 1px solid rgba(197, 160, 89, 0.3);
     color: var(--color-cream);
   }
 
   .form-textarea {
-    height: 28px;
-    padding: 0.15rem 0.4rem;
+    height: 44px;
+    padding: 0.35rem 0.65rem;
     resize: none;
   }
 
   .form-submit-btn {
-    padding: 0.35rem 0.6rem;
-    font-size: 0.62rem;
+    padding: 0.55rem 1rem;
+    font-size: 0.72rem;
+    font-weight: 800;
     width: 100%;
-    margin-top: 0.15rem;
-    border-radius: 5px;
+    margin-top: 0.3rem;
+    border-radius: 6px;
     box-sizing: border-box;
   }
 
@@ -738,6 +787,16 @@
     right: 0;
     font-size: 0.7rem;
     padding: 4px 10px;
+  }
+}
+
+@media (min-width: 769px) {
+  .stage6-mobile-tabs {
+    display: none !important;
+  }
+  .appointment-body-grid.mobile-tab-form .appointment-contact-card,
+  .appointment-body-grid.mobile-tab-contact .appointment-form-card {
+    display: flex !important;
   }
 }
 
