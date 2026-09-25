@@ -135,7 +135,7 @@
     overflow: hidden;
   }
 
-  /* Global Floating Kidney Layer on Mobile */
+  /* Global Floating Kidney Layer on Mobile (Fills marked area above text) */
   .global-kidney-layer {
     display: flex !important;
     align-items: flex-start;
@@ -143,11 +143,22 @@
     z-index: 15;
     opacity: 1;
     pointer-events: none;
+    width: 100%;
   }
 
   .mrblack-kidney-wrapper {
-    width: clamp(210px, 58vw, 280px);
-    height: clamp(175px, 48vw, 230px);
+    width: 92vw;
+    max-width: 420px;
+    height: 235px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .mrblack-kidney-img.isolated-kidney {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
   }
 
   /* Stage 1: Hero Section */
@@ -165,7 +176,7 @@
   .mrblack-hero-left {
     align-items: center;
     text-align: center;
-    margin-top: 190px; /* Space for larger floating kidney image sitting ABOVE title on Stage 1 */
+    margin-top: 240px; /* Space for full-size kidney image filling area ABOVE title on Stage 1 */
   }
 
   .mrblack-hero-title {
