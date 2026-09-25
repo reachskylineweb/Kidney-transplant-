@@ -137,9 +137,9 @@ export const HeroAndStory = () => {
         .to(
           kidneyRef.current,
           {
-            y: '38vh',
+            y: () => (window.innerWidth <= 768 ? '18vh' : '38vh'),
             rotation: 360,
-            scale: 0.95,
+            scale: () => (window.innerWidth <= 768 ? 0.75 : 0.95),
             duration: 1.2,
             ease: 'power1.inOut'
           },
